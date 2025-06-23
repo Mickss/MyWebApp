@@ -14,3 +14,20 @@
 {
     <p><strong>@Model.Message</strong></p>
 }
+<form method="post">
+    <button type="submit" asp-page-handler="ShowFact">Show interesting fact</button>
+</form>
+
+@if (Model.Fact != null)
+{
+    <p><em>@Model.Fact</em></p>
+}
+<form method="post">
+    <input asp-for="UserName" placeholder="Enter your name" />
+    <button type="submit" asp-page-handler="SayHello">Say hello to me</button>
+</form>
+
+@if (Model.Greeting != null)
+{
+    <p><strong>@Model.Greeting</strong></p>
+}
