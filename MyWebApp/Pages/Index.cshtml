@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>I will definitely add something fantastic here!</h1>
+
+<form method="post">
+    <button type="submit" asp-page-handler="Hello">Click me</button>
+</form>
+
+@if (Model.Message != null)
+{
+    <p><strong>@Model.Message</strong></p>
+}
